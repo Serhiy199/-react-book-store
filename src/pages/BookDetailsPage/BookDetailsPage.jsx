@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, Suspense } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
+import { arrBooks } from '../../assets/arrBooks';
 // import Loader from '../../components/Loader/Loader';
 // import { CinemaId } from '../../cinema-api';
 import { GoArrowLeft } from 'react-icons/go';
@@ -15,15 +16,21 @@ import {
 } from './BookDetailsPage.module.css';
 
 export default function BookDetailsPage() {
+    // console.log(arrBooks);
     // const [movieData, setMovieData] = useState([]);
     // const [movieGenres, setMovieGenres] = useState([]);
     // const [error, setError] = useState(false);
     // const [loading, setLoading] = useState(false);
-    // const { movieId } = useParams();
+    const { bookId } = useParams();
+    // console.log(bookId);
     const location = useLocation();
 
     const backLinkRef = useRef(location.state ?? '/');
 
+    const book = arrBooks.find(book => book.id === bookId);
+
+    // console.log(book);
+    // (option) => option.label === "blue"
     // useEffect(() => {
     //     async function getCinema() {
     //         try {
@@ -43,8 +50,8 @@ export default function BookDetailsPage() {
     //     getCinema();
     // }, [movieId]);
 
-    // const defaultImg =
-    //     'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
+    const defaultImg =
+        'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
 
     return (
         <>
@@ -58,41 +65,29 @@ export default function BookDetailsPage() {
                 <div>
                     {' '}
                     <img
-                        src={
-                            movieData.poster_path
-                                ? `https://image.tmdb.org/t/p/w500/${movieData.poster_path}`
-                                : defaultImg
-                        }
+                        src={book.coverImageUrl ? book.coverImageUrl : defaultImg}
                         width={300}
                         alt="poster"
                     />
                 </div>
                 <div>
                     {' '}
-                    <h2 className={titleMovie}>{movieData.title}</h2>
+                    <h2 className={titleMovie}>{book.title}</h2>
+                    <h2 className={titleMovie}>Author: {book.author}</h2>
+                    <h3 className={titleGenres}>Genre: {book.genre}</h3>
+                    <p>Year published: {book.yearPublished}</p>
+                    <p>Pages: {book.pages}</p>
                     <p>
-                        <span className={userScore}>User Score:</span>{' '}
-                        {Math.round((movieData.vote_average * 100) / 10)}%
+                        Price: {book.price} {book.currency}
                     </p>
-                    <h3 className={titleGenres}>Overview</h3>
-                    <p className={movieOverview}>{movieData.overview}</p>
-                    <h3 className={titleGenres}>Genres</h3>
-                    {movieGenres.map(list => {
-                        return (
-                            <span className={listGenres} key={list.id}>
-                                {list.name}
-                            </span>
-                        );
-                    })}
+                    <h3 className={titleGenres}>Language: {book.language}</h3>
                 </div>
             </div>
 
             <div>
-                <h3>Additional information</h3>
+                <h3>Book description</h3>
+                <p>{book.description}</p>
                 <Suspense fallback={''}>
-                    <Link className={link} to={'cast'}>
-                        Cast
-                    </Link>
                     <Link className={link} to={'reviews'}>
                         Reviews
                     </Link>

@@ -1,4 +1,4 @@
-.contactBox {
+/* .contactBox {
     width: 250px;
 
     justify-content: space-between;
@@ -6,16 +6,16 @@
     border: 2px solid #212121;
     border-radius: 4px;
     padding: 10px;
-}
+} */
 
-.info {
+/* .info {
     display: flex;
     flex-direction: column;
     font-family: inherit;
     font-size: 18px;
     font-weight: normal;
     color: #212121;
-}
+} */
 
 .button {
     font-family: inherit;
@@ -27,8 +27,44 @@
     cursor: pointer;
 }
 
-.text {
+/* .text {
     display: flex;
     gap: 15px;
     align-items: center;
+} */
+
+.listBook {
+    color: black;
+    font-size: 18px;
+    background-color: #fff;
+    width: calc((100% - 32px) / 3);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+}
+
+.img {
+    display: block;
+    min-height: 576px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.linkBook {
+    color: black;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.listMovie:hover {
+    color: blue;
+}
+
+.titleBook {
+    margin-bottom: 0;
+    padding-bottom: 10px;
 }

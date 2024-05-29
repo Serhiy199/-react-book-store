@@ -1,33 +1,26 @@
-import { useEffect, useState, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
 
-import { books } from './assets/arrBooks';
 import Navigation from './components/Navigation/Navigation';
 import HomePage from './pages/Home/HomePage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import BookDetailsPage from './pages/BookDetailsPage/BookDetailsPage';
+import BookReviews from './components/BookReviews/BookReviews';
 
 function App() {
     // const [arrBooks, setArrBooks] = useState(() => {
     //     const savedBooks = window.localStorage.getItem('saved-books');
     //     return savedBooks !== null ? JSON.parse(savedBooks) : books;
     // });
-    const [arrBooks, setArrBooks] = useState(books);
-    // console.log(arrBooks);
 
-    const [filterBooks, setFilterBooks] = useState('');
-    const [filterQuizById, setFilterQuizById] = useState('');
+    // const [filterQuizById, setFilterQuizById] = useState('');
 
-    const selectedQuiz = quizId => {
-        return setFilterQuizById(quizId);
-    };
+    // const selectedQuiz = quizId => {
+    //     return setFilterQuizById(quizId);
+    // };
 
     // const findBooks = arrBooks.find(book => book.id === filterBooks);
-
-    const visibleBooks = arrBooks.filter(book =>
-        book.title.toLowerCase().includes(filterBooks.toLowerCase())
-    );
 
     // const deleteQuiz = contactId => {
     //     setArrQuizQuestions(prevQuiz => {
@@ -46,22 +39,15 @@ function App() {
                     path="/"
                     element={
                         <HomePage
-                            onFilterBooks={filterBooks}
-                            onSetFilterBooks={setFilterBooks}
-                            onListBooks={visibleBooks}
-                            // onDelete={deleteQuiz}
-                            onBooksId={selectedQuiz}
+                        // onDelete={deleteQuiz}
+                        // onBooksId={selectedQuiz}
                         />
                     }
                 />
                 <Route path="/book/:bookId" element={<BookDetailsPage />}>
-                    {/* <Route path="cast" element={<MovieCast />} />
-                    <Route path="reviews" element={<MovieReviews />} /> */}
+                    <Route path="reviews" element={<BookReviews />} />
                 </Route>
-                {/* <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
-                        <Route path="cast" element={<MovieCast />} />
-                        <Route path="reviews" element={<MovieReviews />} />
-                    </Route> */}
+
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </>

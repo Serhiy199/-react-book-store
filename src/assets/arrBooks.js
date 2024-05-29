@@ -1,4 +1,4 @@
-export const books = [
+export const arrBooks = [
     {
         id: '6655fd25637a348b3aeb481f',
         title: 'To Kill a Mockingbird',
@@ -14,14 +14,17 @@ export const books = [
         pages: 324,
         description:
             'A gripping, heart-wrenching tale of coming-of-age in a South poisoned by prejudice.',
-        coverImageUrl: 'https://example.com/images/to-kill-a-mockingbird.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/a00/pueluq2lnn07ar3ckjndurognopor5zv/1900_800_174b5ed2089e1946312e2a80dcd26f146/kniga_to_kill_a_mockingbird_50th_anniversary_edition.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'John Doe',
                 rating: 5,
                 comment: 'A masterpiece of American literature.',
             },
             {
+                id: 2,
                 reviewer: 'Jane Smith',
                 rating: 4,
                 comment: 'Compelling and emotionally impactful.',
@@ -42,14 +45,17 @@ export const books = [
         language: 'English',
         pages: 328,
         description: 'A dystopian novel set in a totalitarian society ruled by Big Brother.',
-        coverImageUrl: 'https://example.com/images/1984.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/499/ih7z3262dor13selgrfytwgiaoxyhg9k/293_448_174b5ed2089e1946312e2a80dcd26f146/graficheskiy_roman_george_orwell_s_1984_the_graphic_novel.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Alice Johnson',
                 rating: 5,
                 comment: 'A chilling portrayal of a dystopian future.',
             },
             {
+                id: 2,
                 reviewer: 'Bob Brown',
                 rating: 4,
                 comment: 'Thought-provoking and disturbing.',
@@ -70,14 +76,12 @@ export const books = [
         language: 'English',
         pages: 180,
         description: 'A novel about the American dream and the roaring twenties.',
-        coverImageUrl: 'https://example.com/images/the-great-gatsby.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/77c/omf4tlwhyh3ok3uk13wptniobko3xxvs/262_400_174b5ed2089e1946312e2a80dcd26f146/kniga_the_great_gatsby.jpeg',
         reviews: [
+            { id: 1, reviewer: 'Emma Wilson', rating: 5, comment: 'A beautiful and tragic story.' },
             {
-                reviewer: 'Emma Wilson',
-                rating: 5,
-                comment: 'A beautiful and tragic story.',
-            },
-            {
+                id: 2,
                 reviewer: 'Liam Johnson',
                 rating: 4,
                 comment: 'An enduring classic with a poignant message.',
@@ -98,14 +102,17 @@ export const books = [
         language: 'English',
         pages: 585,
         description: 'A novel about the quest for the great white whale, Moby Dick.',
-        coverImageUrl: 'https://example.com/images/moby-dick.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/c25/lq7qbxmomxyyxg1zfdlyxuw0pk3wuckh/288_450_174b5ed2089e1946312e2a80dcd26f146/kniga_moby_dick.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Oliver Smith',
                 rating: 4,
                 comment: 'A thrilling and symbolic adventure.',
             },
             {
+                id: 2,
                 reviewer: 'Sophia Davis',
                 rating: 5,
                 comment: 'A timeless tale of obsession and revenge.',
@@ -127,14 +134,17 @@ export const books = [
         pages: 279,
         description:
             'A classic novel about the manners and matrimonial machinations among the British gentry of the early 19th century.',
-        coverImageUrl: 'https://example.com/images/pride-and-prejudice.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/49c/8xm993lvdk5qukj07r66bmit8y4whd4m/1900_800_174b5ed2089e1946312e2a80dcd26f146/knyga_pride_and_prejudice.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Charlotte Miller',
                 rating: 5,
                 comment: 'A delightful read with memorable characters.',
             },
             {
+                id: 2,
                 reviewer: 'Ethan Wilson',
                 rating: 4,
                 comment: 'A timeless romance that still captivates readers today.',
@@ -156,46 +166,20 @@ export const books = [
         pages: 277,
         description:
             'A story about a few days in the life of a troubled teenager, Holden Caulfield.',
-        coverImageUrl: 'https://example.com/images/the-catcher-in-the-rye.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/a83/j8pcs5hu2qjjuw7kt6gsff3dk5vfe4p5/432_707_174b5ed2089e1946312e2a80dcd26f146/kniga_the_catcher_in_the_rye.png',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Noah Anderson',
                 rating: 5,
                 comment: 'A powerful narrative on adolescence and alienation.',
             },
             {
+                id: 2,
                 reviewer: 'Isabella Garcia',
                 rating: 4,
                 comment: 'An engaging and thought-provoking book.',
-            },
-        ],
-    },
-    {
-        id: '6655fd25f9bfc03ec946de3d',
-        title: 'War and Peace',
-        author: 'Leo Tolstoy',
-        yearPublished: 1869,
-        genre: 'Historical',
-        price: 19.99,
-        currency: 'USD',
-        available: true,
-        stock: 60,
-        publisher: 'The Russian Messenger',
-        language: 'English',
-        pages: 1225,
-        description:
-            'A novel that intertwines the lives of private and public individuals during the time of the Napoleonic wars.',
-        coverImageUrl: 'https://example.com/images/war-and-peace.jpg',
-        reviews: [
-            {
-                reviewer: 'Liam Smith',
-                rating: 5,
-                comment: 'A monumental work of literature.',
-            },
-            {
-                reviewer: 'Olivia Johnson',
-                rating: 5,
-                comment: 'An epic tale with a broad range of characters.',
             },
         ],
     },
@@ -213,14 +197,17 @@ export const books = [
         language: 'English',
         pages: 268,
         description: 'A novel about a future society driven by technology and consumerism.',
-        coverImageUrl: 'https://example.com/images/brave-new-world.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/cc8/i5jzxxv404uswljwb3xnc1zdgou13wky/1900_800_174b5ed2089e1946312e2a80dcd26f146/Brave-New-World-_Vintage-Quarterbound-Classics_-01.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'James Brown',
                 rating: 5,
                 comment: 'A thought-provoking vision of the future.',
             },
             {
+                id: 2,
                 reviewer: 'Emily Martinez',
                 rating: 4,
                 comment: 'An unsettling and fascinating read.',
@@ -241,14 +228,17 @@ export const books = [
         language: 'English',
         pages: 310,
         description: 'A fantasy novel about the adventures of Bilbo Baggins.',
-        coverImageUrl: 'https://example.com/images/the-hobbit.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/986/ehxj0gqb563stxvj5zynfl1po386h1z6/417_640_174b5ed2089e1946312e2a80dcd26f146/kniga_the_hobbit.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Michael White',
                 rating: 5,
                 comment: 'A wonderful journey into Middle-earth.',
             },
             {
+                id: 2,
                 reviewer: 'Sarah Harris',
                 rating: 4,
                 comment: 'An enchanting and delightful story.',
@@ -269,14 +259,17 @@ export const books = [
         language: 'English',
         pages: 541,
         description: 'An epic poem about the adventures of Odysseus.',
-        coverImageUrl: 'https://example.com/images/the-odyssey.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/614/ql0a99tuh5ecgkccsqsxv976d4y4x486/1900_800_174b5ed2089e1946312e2a80dcd26f146/knyga_the_odyssey.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Daniel Martinez',
                 rating: 5,
                 comment: 'A timeless epic that continues to inspire.',
             },
             {
+                id: 2,
                 reviewer: 'Jessica Lee',
                 rating: 4,
                 comment: 'A fascinating and heroic tale.',
@@ -298,14 +291,17 @@ export const books = [
         pages: 500,
         description:
             'A novel about the experiences of the titular character, including her growth to adulthood and her love for Mr. Rochester.',
-        coverImageUrl: 'https://example.com/images/jane-eyre.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/7cb/24ma608a27xzgfhpqptsar3ijuznj1l0/1900_800_174b5ed2089e1946312e2a80dcd26f146/knyga_jane_eyre.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'David Clark',
                 rating: 5,
                 comment: 'A compelling and deeply emotional story.',
             },
             {
+                id: 2,
                 reviewer: 'Sophia Wilson',
                 rating: 4,
                 comment: 'A beautifully written classic.',
@@ -327,14 +323,17 @@ export const books = [
         pages: 416,
         description:
             'A novel about the intense and almost demonic love between Catherine Earnshaw and Heathcliff.',
-        coverImageUrl: 'https://example.com/images/wuthering-heights.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/fb9/lo42mafap2skdf66z5qr3j08jfu5xkij/287_450_174b5ed2089e1946312e2a80dcd26f146/kniga_wuthering_heights.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'James Moore',
                 rating: 5,
                 comment: 'A dark and passionate love story.',
             },
             {
+                id: 2,
                 reviewer: 'Emily Brown',
                 rating: 4,
                 comment: 'A haunting and powerful narrative.',
@@ -356,14 +355,17 @@ export const books = [
         pages: 453,
         description:
             'A satirical novel set during World War II, focusing on the absurdities of war.',
-        coverImageUrl: 'https://example.com/images/catch-22.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/220/eqbw1ffpv6mtn378vtzghec8yph6sm3h/293_448_174b5ed2089e1946312e2a80dcd26f146/kniga_catch_22.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Henry Taylor',
                 rating: 5,
                 comment: 'A brilliant and darkly humorous book.',
             },
             {
+                id: 2,
                 reviewer: 'Mia Thompson',
                 rating: 4,
                 comment: 'An unforgettable satire on the horrors of war.',
@@ -384,14 +386,17 @@ export const books = [
         language: 'English',
         pages: 287,
         description: "A story about a father and son's journey through a post-apocalyptic world.",
-        coverImageUrl: 'https://example.com/images/the-road.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/9b0/g19yl0eegsxi8y08xjk1glcmpv50nk4e/296_448_174b5ed2089e1946312e2a80dcd26f146/kniga_the_road.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Jackson Anderson',
                 rating: 5,
                 comment: 'A haunting and beautifully written novel.',
             },
             {
+                id: 2,
                 reviewer: 'Ava Robinson',
                 rating: 4,
                 comment: 'A gripping and emotional read.',
@@ -412,14 +417,17 @@ export const books = [
         language: 'English',
         pages: 552,
         description: 'A novel about a young girl living in Nazi Germany, narrated by Death.',
-        coverImageUrl: 'https://example.com/images/the-book-thief.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/3c6/jq6s9r63c5eofb1zh01rn9u2bfum5b3i/288_450_174b5ed2089e1946312e2a80dcd26f146/kniga_the_book_thief.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Lucas Martin',
                 rating: 5,
                 comment: 'A powerful and heart-wrenching story.',
             },
             {
+                id: 2,
                 reviewer: 'Amelia Rodriguez',
                 rating: 4,
                 comment: 'An evocative and deeply moving book.',
@@ -440,14 +448,17 @@ export const books = [
         language: 'English',
         pages: 464,
         description: 'A novel about the plight of migrant workers during the Great Depression.',
-        coverImageUrl: 'https://example.com/images/the-grapes-of-wrath.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/996/7bo0pwd6rxqh1e30iunsb9rq6x9c7ml6/392_640_174b5ed2089e1946312e2a80dcd26f146/kniga_the_grapes_of_wrath.png',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Mason Wright',
                 rating: 5,
                 comment: 'A profound and moving story of struggle and resilience.',
             },
             {
+                id: 2,
                 reviewer: 'Mia Walker',
                 rating: 4,
                 comment: 'A powerful depiction of hardship and hope.',
@@ -468,14 +479,17 @@ export const books = [
         language: 'English',
         pages: 1216,
         description: 'An epic fantasy novel about the quest to destroy the One Ring.',
-        coverImageUrl: 'https://example.com/images/the-lord-of-the-rings.jpg',
+        coverImageUrl:
+            'https://www.britishbook.ua/upload/resize_cache/iblock/7cb/6p7bt2akk8b6l9end5hb2ttwh4lrhe44/285_448_174b5ed2089e1946312e2a80dcd26f146/kniga_the_lord_of_the_rings_tv_tie_in_edition.jpg',
         reviews: [
             {
+                id: 1,
                 reviewer: 'Elijah Young',
                 rating: 5,
                 comment: 'An extraordinary and captivating saga.',
             },
             {
+                id: 2,
                 reviewer: 'Charlotte King',
                 rating: 5,
                 comment: 'A timeless adventure that transcends generations.',
