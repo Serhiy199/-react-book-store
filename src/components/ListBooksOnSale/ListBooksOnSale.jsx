@@ -1,23 +1,19 @@
-import Book from '../Book/Book';
-import { arrBooks } from '../../assets/arrBooks';
 import { list } from './ListBooksOnSale.module.css';
 import { useSelector } from 'react-redux';
-import { selectFilter } from '../../redux/filterSlice';
-import { selectAddBook } from '../../redux/orderedBooksSlice';
+
+import { selectAddBook } from '../../redux/saleBooksSlice';
 import BookSale from '../../components/BookSale/BookSale';
 
 export default function ListBooks() {
-    const arrBooksInBasket = useSelector(selectAddBook);
-
-    // const value = useSelector(selectFilter);
-    // const visibleBooks = arrBooks.filter(book =>
-    //     book.title.toLowerCase().includes(value.toLowerCase())
-    // );
+    const arrSaleBooks = useSelector(selectAddBook);
+    console.log(arrSaleBooks.length);
     return (
         <ul className={list}>
-            {arrBooksInBasket.map(listBook => (
-                <BookSale key={listBook.orderId} listBook={listBook} />
-            ))}
+            {arrSaleBooks.length > 0
+                ? arrSaleBooks.map(listBook => (
+                      <BookSale key={listBook.orderId} listBook={listBook} />
+                  ))
+                : "Looks like you haven't added any items to your cart yet. To get started, you can add the product you like and order it by clicking on the cart."}
         </ul>
     );
 }

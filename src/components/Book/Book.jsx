@@ -1,10 +1,7 @@
 // import css from './Book.module.css';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
-import { ordered } from '../../redux/orderedBooksSlice';
-import { amount } from '../../redux/amountBasketSlice';
-
+import { sale } from '../../redux/saleBooksSlice';
 import { listBookStyle, img, linkBook, titleBook, button } from './Book.module.css';
 
 export default function Book({ listBook }) {
@@ -31,7 +28,7 @@ export default function Book({ listBook }) {
                 </Link>
                 <button
                     onClick={() => {
-                        dispatch(ordered(listBook)), dispatch(amount(listBook.price));
+                        dispatch(sale(listBook));
                     }}
                     className={button}
                 >

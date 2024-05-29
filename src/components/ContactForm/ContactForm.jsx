@@ -3,8 +3,8 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectAddBook } from '../../redux/orderedBooksSlice';
+import { useSelector } from 'react-redux';
+import { selectAddBook } from '../../redux/saleBooksSlice';
 
 const ContactSchema = Yup.object().shape({
     name: Yup.string().min(3, 'Too short!').max(50, 'Too long!').required('Required'),

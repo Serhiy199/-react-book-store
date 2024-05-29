@@ -1,16 +1,8 @@
-// import css from './Book.module.css';
-import { Link, useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-
-import { addQuantity, subtractQuantity } from '../../redux/orderedBooksSlice';
-import { selectAddBook } from '../../redux/orderedBooksSlice';
-// import { amount } from '../../redux/amountBasketSlice';
-
+import { useDispatch } from 'react-redux';
+import { addQuantity, subtractQuantity } from '../../redux/saleBooksSlice';
 import { listBookStyle, img, linkBook, titleBook, button } from './BookSale.module.css';
 
 export default function Book({ listBook }) {
-    const stateBook = useSelector(selectAddBook);
-    const location = useLocation();
     const dispatch = useDispatch();
 
     const defaultImg =

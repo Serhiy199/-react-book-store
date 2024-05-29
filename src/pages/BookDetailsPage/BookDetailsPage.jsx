@@ -5,10 +5,7 @@ import { GoArrowLeft } from 'react-icons/go';
 import {
     container,
     titleMovie,
-    listGenres,
     titleGenres,
-    movieOverview,
-    userScore,
     link,
     backLink,
 } from './BookDetailsPage.module.css';

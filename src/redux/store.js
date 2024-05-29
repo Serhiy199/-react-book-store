@@ -1,13 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 import { filterReducer } from './filterSlice';
-import { orderedBooksReducer } from './orderedBooksSlice';
-import { amountBasketReducer } from './amountBasketSlice';
+import { saleBooksReducer } from './saleBooksSlice';
 
 const rootReducer = combineReducers({
     filter: filterReducer,
-    ordered: orderedBooksReducer,
-    amount: amountBasketReducer,
+    sale: saleBooksReducer,
 });
 
 export const store = createStore(rootReducer, composeWithDevTools());
