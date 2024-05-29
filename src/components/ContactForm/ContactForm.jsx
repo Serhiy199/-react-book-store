@@ -3,23 +3,50 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectAddBook } from '../../redux/orderedBooksSlice';
 
 const ContactSchema = Yup.object().shape({
     name: Yup.string().min(3, 'Too short!').max(50, 'Too long!').required('Required'),
-    number: Yup.string().min(9, 'Too short!').max(12, 'Too long!').required('Required'),
+    surname: Yup.string().min(3, 'Too short!').max(50, 'Too long!').required('Required'),
+    address: Yup.string().min(3, 'Too short!').max(50, 'Too long!').required('Required'),
+    number: Yup.number()
+        .typeError("That doesn't look like a phone number")
+        .positive("A phone number can't start with a minus")
+        .integer("A phone number can't include a decimal point")
+        .min(8)
+        .required('A phone number is required'),
 });
 
 const initialValues = {
     name: '',
+    surname: '',
+    address: '',
     number: '',
 };
 
-export default function ContactForm({ onContact }) {
-    const usernNameId = useId();
+export default function ContactForm() {
+    const userNameId = useId();
+    const surnameId = useId();
+    const addressId = useId();
     const numberId = useId();
 
-    const handleSubmit = ({ name, number }, actions) => {
-        onContact({ id: nanoid(), name, number });
+    const arrSaleBooks = useSelector(selectAddBook);
+    const totalScore = arrSaleBooks.reduce((total, book) => {
+        return total + book.totalScore;
+    }, 0);
+
+    const handleSubmit = ({ name, surname, address, number }, actions) => {
+        const form = {
+            id: nanoid(),
+            name,
+            surname,
+            address,
+            number,
+            totalScore: totalScore,
+            ...arrSaleBooks,
+        };
+        localStorage.setItem('sale-books', JSON.stringify(form));
         actions.resetForm();
     };
 
@@ -31,25 +58,25 @@ export default function ContactForm({ onContact }) {
         >
             <Form className={css.form}>
                 <div className={css.box}>
-                    <label htmlFor={usernNameId} className={css.label}>
+                    <label htmlFor={userNameId} className={css.label}>
                         Name
                     </label>
-                    <Field name="name" id={usernNameId} className={css.field} />
+                    <Field name="name" id={userNameId} className={css.field} />
                     <ErrorMessage name="name" component="span" className={css.error} />
                 </div>
                 <div className={css.box}>
-                    <label htmlFor={numberId} className={css.label}>
+                    <label htmlFor={surnameId} className={css.label}>
                         Surname
                     </label>
-                    <Field type="number" name="number" id={numberId} className={css.field} />
-                    <ErrorMessage name="number" component="span" className={css.error} />
+                    <Field name="surname" id={surnameId} className={css.field} />
+                    <ErrorMessage name="surname" component="span" className={css.error} />
                 </div>
                 <div className={css.box}>
-                    <label htmlFor={numberId} className={css.label}>
+                    <label htmlFor={addressId} className={css.label}>
                         Address
                     </label>
-                    <Field type="number" name="number" id={numberId} className={css.field} />
-                    <ErrorMessage name="number" component="span" className={css.error} />
+                    <Field name="address" id={addressId} className={css.field} />
+                    <ErrorMessage name="address" component="span" className={css.error} />
                 </div>
                 <div className={css.box}>
                     <label htmlFor={numberId} className={css.label}>

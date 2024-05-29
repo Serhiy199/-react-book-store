@@ -20,7 +20,7 @@ export const orderedBooksReducer = (state = { buyBook: [] }, action) => {
             const findById = getLocalStor.find(book => book.id === action.payload.id);
             // console.log(findById);
             if (findById) {
-                findById.quantity = findById.quantity + 1;
+                // findById.quantity = findById.quantity + 1;
                 // console.log(findById.quantity);
                 const setLocalStor = [...getLocalStor];
                 localStorage.setItem('ordered-books', JSON.stringify(setLocalStor));
@@ -36,9 +36,11 @@ export const orderedBooksReducer = (state = { buyBook: [] }, action) => {
             const findById = getLocalStor.find(book => book.id === action.payload.id);
 
             findById.quantity = findById.quantity + 1;
+            findById.totalScore = findById.price * findById.quantity;
+            console.log(findById.totalScore);
 
             const setLocalStor = [...getLocalStor];
-            // console.log(setLocalStor);
+
             localStorage.setItem('ordered-books', JSON.stringify(setLocalStor));
 
             return { ...state, buyBook: [...setLocalStor] };
@@ -46,7 +48,11 @@ export const orderedBooksReducer = (state = { buyBook: [] }, action) => {
         case 'books/subtractQuantity': {
             const findById = getLocalStor.find(book => book.id === action.payload.id);
 
+            findById.totalScore = findById.totalScore - findById.price;
+
             findById.quantity = findById.quantity - 1;
+
+            console.log(findById.totalScore);
             if (findById.quantity === 0) {
                 console.log('yes');
 

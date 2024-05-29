@@ -8,10 +8,10 @@ import { useEffect, useState } from 'react';
 import { selectAddBook } from '../../redux/orderedBooksSlice';
 
 export default function Navigation() {
-    const arrOrderedBooks = useSelector(selectAddBook);
+    const arrSaleBooks = useSelector(selectAddBook);
 
-    const totalScore = arrOrderedBooks.reduce((total, book) => {
-        return total + book.price;
+    const totalScore = arrSaleBooks.reduce((total, book) => {
+        return total + book.totalScore;
     }, 0);
 
     const buildLinkClass = ({ isActive }) => {
@@ -25,7 +25,7 @@ export default function Navigation() {
                     Home
                 </NavLink>
                 <NavLink className={buildLinkClass} to="/basket">
-                    <FaShoppingBasket /> {arrOrderedBooks.length > 0 ? `${totalScore} USD` : ''}
+                    <FaShoppingBasket /> {arrSaleBooks.length > 0 ? `${totalScore} USD` : ''}
                 </NavLink>
             </nav>
         </header>
