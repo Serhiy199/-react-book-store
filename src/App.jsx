@@ -7,6 +7,7 @@ import HomePage from './pages/Home/HomePage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import BookDetailsPage from './pages/BookDetailsPage/BookDetailsPage';
 import BookReviews from './components/BookReviews/BookReviews';
+import BasketPage from './pages/BasketPage/BasketPage';
 
 function App() {
     // const [arrBooks, setArrBooks] = useState(() => {
@@ -35,15 +36,8 @@ function App() {
         <>
             <Navigation />
             <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <HomePage
-                        // onDelete={deleteQuiz}
-                        // onBooksId={selectedQuiz}
-                        />
-                    }
-                />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/basket" element={<BasketPage />} />
                 <Route path="/book/:bookId" element={<BookDetailsPage />}>
                     <Route path="reviews" element={<BookReviews />} />
                 </Route>

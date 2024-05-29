@@ -1,24 +1,16 @@
 // import css from './Book.module.css';
 import { Link, useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectAddBook } from '../../redux/orderedBooksSlice';
-import { addBook } from '../../redux/orderedBooksSlice';
+import { useDispatch } from 'react-redux';
+
+import { ordered } from '../../redux/orderedBooksSlice';
 import { amount } from '../../redux/amountBasketSlice';
 
 import { listBookStyle, img, linkBook, titleBook, button } from './Book.module.css';
 
-export default function Book({
-    listBook,
-    //  {   coverImageUrl }
-}) {
-    // console.log(listBook);
+export default function Book({ listBook }) {
     const location = useLocation();
     const dispatch = useDispatch();
-    const arrBook = useSelector(selectAddBook);
 
-    // console.log(eea);
-    console.log(arrBook);
-    // arrBook.map(arr => console.log(arr));
     const defaultImg =
         'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
     return (
@@ -39,7 +31,7 @@ export default function Book({
                 </Link>
                 <button
                     onClick={() => {
-                        dispatch(addBook(listBook)), dispatch(amount(listBook.price));
+                        dispatch(ordered(listBook)), dispatch(amount(listBook.price));
                     }}
                     className={button}
                 >

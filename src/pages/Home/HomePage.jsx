@@ -1,20 +1,11 @@
 import ListBooks from '../../components/ListBooks/ListBooks';
 import SearchBox from '../../components/SearchBox/SearchBox';
 
-export default function HomePage(
-    {
-        // onQuizId,
-        // onDelete,
-    }
-) {
+export default function HomePage() {
     return (
         <>
             <SearchBox />
-            <ListBooks
-            // onDelete={onDelete}
-            // onQuizId={onQuizId}
-            />
-            ;
+            <ListBooks />;
         </>
     );
 }
