@@ -13,4 +13,4 @@ export const amountBasketReducer = (state = { value: 0 }, action) => {
     }
 };
 
-export const selectAmountValue = state => state.amount.value;
+// export const selectAmountValue = state => state.amount.value;

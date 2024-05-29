@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectAmountValue } from '../../redux/amountBasketSlice';
+// import { selectAmountValue } from '../../redux/amountBasketSlice';
 import { headerStyle, active, link } from './Navigation.module.css';
 import clsx from 'clsx';
 import { FaShoppingBasket } from 'react-icons/fa';
@@ -8,14 +8,8 @@ import { useEffect, useState } from 'react';
 import { selectAddBook } from '../../redux/orderedBooksSlice';
 
 export default function Navigation() {
-    // const [arrOrderedBooks, setArrOrderedBooks] = useState(() => {
-    //     const orderedBooks = localStorage.getItem('ordered-books');
-    //     return orderedBooks !== null ? JSON.parse(orderedBooks) : [];
-    // });
-
     const arrOrderedBooks = useSelector(selectAddBook);
-    console.log(arrOrderedBooks);
-    // console.log(arrOrderedBooks.length);
+
     const totalScore = arrOrderedBooks.reduce((total, book) => {
         return total + book.price;
     }, 0);
@@ -23,6 +17,7 @@ export default function Navigation() {
     const buildLinkClass = ({ isActive }) => {
         return clsx(link, isActive && active);
     };
+
     return (
         <header className={headerStyle}>
             <nav>

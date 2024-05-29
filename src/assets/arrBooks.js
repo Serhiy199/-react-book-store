@@ -1,6 +1,8 @@
 export const arrBooks = [
     {
         id: '6655fd25637a348b3aeb481f',
+        orderId: '7d2f8c45-9b10-4f0a-8d9c-8e42f14c6d3a',
+        quantity: 1,
         title: 'To Kill a Mockingbird',
         author: 'Harper Lee',
         yearPublished: 1960,
@@ -33,6 +35,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd2540664bc4add28281',
+        orderId: 'c0a12345-5678-9abc-def0-1234567890ab',
+        quantity: 1,
         title: '1984',
         author: 'George Orwell',
         yearPublished: 1949,
@@ -64,6 +68,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd2581d7061825b641d6',
+        orderId: 'a98b6d4c-7e5f-4236-bc1f-3d2e7c0b1a2d',
+        quantity: 1,
         title: 'The Great Gatsby',
         author: 'F. Scott Fitzgerald',
         yearPublished: 1925,
@@ -90,6 +96,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25a954dbdcf23385fe',
+        orderId: 'de9f4c82-3b5a-4d6c-b8d9-7e1c2a4b6e8d',
+        quantity: 1,
         title: 'Moby Dick',
         author: 'Herman Melville',
         yearPublished: 1851,
@@ -121,6 +129,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd251ec611e1d04db1fa',
+        orderId: 'b2d7f6e4-8c9d-4e3f-a1b2-6f7d8e9c0a1b',
+        quantity: 1,
         title: 'Pride and Prejudice',
         author: 'Jane Austen',
         yearPublished: 1813,
@@ -153,6 +163,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25d9136fc0d94463ea',
+        orderId: '4c8d7f6e-3b1a-5d9c-e2f4-7a8b9c0d1e2f',
+        quantity: 1,
         title: 'The Catcher in the Rye',
         author: 'J.D. Salinger',
         yearPublished: 1951,
@@ -185,6 +197,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25c9cec52e71cabab7',
+        orderId: 'f0a1b2c3-d4e5-6f7a-8b9c-0d1e2f3a4b5c',
+        quantity: 1,
         title: 'Brave New World',
         author: 'Aldous Huxley',
         yearPublished: 1932,
@@ -216,6 +230,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd255ba3612655bcfa8a',
+        orderId: '8e7f6d5c-4b3a-2f1e-9c0d-1a2b3c4d5e6f',
+        quantity: 1,
         title: 'The Hobbit',
         author: 'J.R.R. Tolkien',
         yearPublished: 1937,
@@ -247,6 +263,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25a2ec955fe001be4a',
+        orderId: '1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b',
+        quantity: 1,
         title: 'The Odyssey',
         author: 'Homer',
         yearPublished: -800,
@@ -278,6 +296,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25fa9aa56684498613',
+        orderId: '5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d',
+        quantity: 1,
         title: 'Jane Eyre',
         author: 'Charlotte Brontë',
         yearPublished: 1847,
@@ -310,6 +330,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd2580a5d5262ae33f92',
+        orderId: '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
+        quantity: 1,
         title: 'Wuthering Heights',
         author: 'Emily Brontë',
         yearPublished: 1847,
@@ -342,6 +364,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25335b9fbe0ea5fb88',
+        orderId: '9c0d1e2f-3a4b-5c6d-7e8f-1a2b3c4d5e6f',
+        quantity: 1,
         title: 'The Catch-22',
         author: 'Joseph Heller',
         yearPublished: 1961,
@@ -374,6 +398,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25c06ad3ea88e9d7f3',
+        orderId: 'd1e2f3a4-5b6c-7d8e-9f0a-1b2c3d4e5f6a',
+        quantity: 1,
         title: 'The Road',
         author: 'Cormac McCarthy',
         yearPublished: 2006,
@@ -405,6 +431,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd2591522075cde56172',
+        orderId: '2b3c4d5e-6f7a-8b9c-0d1e-3a4b5c6d7e8f',
+        quantity: 1,
         title: 'The Book Thief',
         author: 'Markus Zusak',
         yearPublished: 2005,
@@ -436,6 +464,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd25b79ed0a9b24633e6',
+        orderId: '4d5e6f7a-8b9c-0d1e-2f3a-5c6d7e8f9a0b',
+        quantity: 1,
         title: 'The Grapes of Wrath',
         author: 'John Steinbeck',
         yearPublished: 1939,
@@ -467,6 +497,8 @@ export const arrBooks = [
     },
     {
         id: '6655fd255ed5fc31cc7c4c73',
+        orderId: '6f7a8b9c-0d1e-2f3a-4b5c-7d8e9f0a1b2c',
+        quantity: 1,
         title: 'The Lord of the Rings',
         author: 'J.R.R. Tolkien',
         yearPublished: 1954,
