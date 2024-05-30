@@ -34,7 +34,7 @@ export default function Navigation() {
                     Books
                 </NavLink>
                 <SearchBox />
-                <NavLink className={buildLinkClass} to="/basket">
+                <NavLink className={buildLinkClass} to="/delivery_payment">
                     <FaShoppingBasket />{' '}
                     {arrSaleBooks.length > 0 ? `${parseFloat(totalScore.toFixed(2))} USD` : ''}
                 </NavLink>
