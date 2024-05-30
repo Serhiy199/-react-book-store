@@ -1,6 +1,15 @@
 import { useDispatch } from 'react-redux';
+import { FaPlus, FaMinus } from 'react-icons/fa';
 import { addQuantity, subtractQuantity } from '../../redux/saleBooksSlice';
-import { listBookStyle, img, linkBook, titleBook, button } from './BookSale.module.css';
+import {
+    listBookStyle,
+    img,
+    titleBook,
+    button,
+    container,
+    authorBook,
+    priceBook,
+} from './BookSale.module.css';
 
 export default function Book({ listBook }) {
     const dispatch = useDispatch();
@@ -9,16 +18,14 @@ export default function Book({ listBook }) {
         'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
     return (
         <li className={listBookStyle}>
-            <div className={linkBook}>
+            <div className={container}>
                 <img
                     className={img}
                     src={listBook.coverImageUrl ? listBook.coverImageUrl : defaultImg}
-                    width={150}
                     alt="poster"
                 />
                 <h3 className={titleBook}>{listBook.title}</h3>
-                <h4>Author: {listBook.author}</h4>
-                <p>Price: {listBook.price}</p>
+                <h4 className={authorBook}>Author: {listBook.author}</h4>
 
                 <button
                     onClick={() => {
@@ -26,7 +33,7 @@ export default function Book({ listBook }) {
                     }}
                     className={button}
                 >
-                    -
+                    <FaMinus />
                 </button>
                 <span>{listBook.quantity}</span>
                 <button
@@ -35,8 +42,11 @@ export default function Book({ listBook }) {
                     }}
                     className={button}
                 >
-                    +
+                    <FaPlus />
                 </button>
+                <p className={priceBook}>
+                    Price: {listBook.price} {listBook.currency}
+                </p>
             </div>
         </li>
     );

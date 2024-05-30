@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-// import { container } from '../../App.module.css';
+
 import {
     header,
     navigation,
@@ -31,7 +31,7 @@ export default function Navigation() {
                     <span className={navigationLogoLink}>Book</span>Store
                 </Link>
                 <NavLink className={buildLinkClass} to="/">
-                    Home
+                    Books
                 </NavLink>
                 <SearchBox />
                 <NavLink className={buildLinkClass} to="/basket">

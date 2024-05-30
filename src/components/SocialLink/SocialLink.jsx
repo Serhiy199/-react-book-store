@@ -7,7 +7,7 @@ export default function SocialLink() {
     return (
         <>
             <div className={containerFooterIcon}>
-                <h3 className={title}>ПРИЄДНУЙСЯ</h3>
+                <h3 className={title}>JOIN</h3>
                 <ul className={listIcon}>
                     <li>
                         <Link className={socialLink} href="">

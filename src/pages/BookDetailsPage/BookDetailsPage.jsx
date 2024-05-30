@@ -5,9 +5,11 @@ import { GoArrowLeft } from 'react-icons/go';
 import {
     container,
     titleMovie,
+    titleAuthor,
     titleGenres,
     link,
     backLink,
+    color,
 } from './BookDetailsPage.module.css';
 
 export default function BookDetailsPage() {
@@ -32,27 +34,40 @@ export default function BookDetailsPage() {
                     {' '}
                     <img
                         src={book.coverImageUrl ? book.coverImageUrl : defaultImg}
-                        width={300}
+                        width={250}
                         alt="poster"
                     />
                 </div>
                 <div>
                     {' '}
                     <h2 className={titleMovie}>{book.title}</h2>
-                    <h2 className={titleMovie}>Author: {book.author}</h2>
-                    <h3 className={titleGenres}>Genre: {book.genre}</h3>
-                    <p>Year published: {book.yearPublished}</p>
-                    <p>Pages: {book.pages}</p>
+                    <h2 className={titleAuthor}>
+                        <span className={color}>Author:</span> {book.author}
+                    </h2>
+                    <h3 className={titleGenres}>
+                        <span className={color}>Genre: </span>
+                        {book.genre}
+                    </h3>
+                    <h3 className={color}>
+                        <span className={color}>Book description</span>
+                    </h3>
+                    <p>{book.description}</p>
                     <p>
-                        Price: {book.price} {book.currency}
+                        <span className={color}>Year published:</span> {book.yearPublished}
                     </p>
-                    <h3 className={titleGenres}>Language: {book.language}</h3>
+                    <p>
+                        <span className={color}>Pages:</span> {book.pages}
+                    </p>
+                    <p>
+                        <span className={color}>Price:</span> {book.price} {book.currency}
+                    </p>
+                    <p className={titleGenres}>
+                        <span className={color}>Language:</span> {book.language}
+                    </p>
                 </div>
             </div>
 
             <div>
-                <h3>Book description</h3>
-                <p>{book.description}</p>
                 <Suspense fallback={''}>
                     <Link className={link} to={'reviews'}>
                         Reviews

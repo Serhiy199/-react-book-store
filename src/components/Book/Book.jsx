@@ -1,4 +1,3 @@
-// import css from './Book.module.css';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { sale } from '../../redux/saleBooksSlice';
@@ -10,6 +9,7 @@ import {
     button,
     authorBook,
     priceBook,
+    buttonAdd,
 } from './Book.module.css';
 import { FaShoppingBasket } from 'react-icons/fa';
 
@@ -26,6 +26,7 @@ export default function Book({ listBook }) {
                     className={img}
                     src={listBook.coverImageUrl ? listBook.coverImageUrl : defaultImg}
                     alt="poster"
+                    // width={150}
                 />
                 <h3 className={titleBook}>{listBook.title}</h3>
                 <h4 className={authorBook}>Author: {listBook.author}</h4>
@@ -37,7 +38,7 @@ export default function Book({ listBook }) {
                     onClick={() => {
                         dispatch(sale(listBook));
                     }}
-                    className={button}
+                    className={buttonAdd}
                 >
                     Add <FaShoppingBasket />
                 </button>

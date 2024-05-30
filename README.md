@@ -1,8 +1,5 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Доброго дня, робив все максимально швидко бо розумію що велика конкуренція, тож стилізація бажає
+бути кращьою. Дякую за надану можливість показати себе!!! Що хотів би пояснити, футер зроблений
+більш як для стилізації, основні вимоги у виконанні логіки я виконав Та ще додав сторінку детальної
+інформації продукту, а також поле пошуку товару хоча в тз цього не було, цим хочу показати що я вмію
+працювати з роутерами та станами!!! На цьому все, якщо будуть питання, готовий відповісти 24/7

@@ -5,3 +5,7 @@
 .text {
     margin-top: 0;
 }
+
+.color {
+    color: rgb(33, 33, 33);
+}

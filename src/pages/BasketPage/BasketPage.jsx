@@ -1,13 +1,12 @@
-import { useSelector } from 'react-redux';
-import { selectAddBook } from '../../redux/saleBooksSlice';
-import { useEffect, useState } from 'react';
+import { title } from './BasketPage.module.css';
 import ContactForm from '../../components/ContactForm/ContactForm';
-import ListBookInBasket from '../../components/ListBooksOnSale/ListBooksOnSale';
+import ListBooksOnSale from '../../components/ListBooksOnSale/ListBooksOnSale';
 
 export default function BasketPage() {
     return (
         <>
-            <ListBookInBasket />;
+            <ListBooksOnSale />
+            <h2 className={title}>Fill out the form to get in touch with you</h2>
             <ContactForm />
         </>
     );

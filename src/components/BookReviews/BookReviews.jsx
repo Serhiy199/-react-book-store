@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { text, titleAuthor } from './BookReviews.module.css';
+import { text, titleAuthor, color } from './BookReviews.module.css';
 import { arrBooks } from '../../assets/arrBooks';
 
 export default function BookReviews() {
@@ -15,8 +15,12 @@ export default function BookReviews() {
                     book.reviews.map(comments => {
                         return (
                             <li key={`todo-item-${comments.id}`}>
-                                <h4 className={titleAuthor}>Author: {comments.reviewer}</h4>
-                                <p className={text}>Rating: {comments.rating}</p>
+                                <h4 className={titleAuthor}>
+                                    <span className={color}>Author:</span> {comments.reviewer}
+                                </h4>
+                                <p className={text}>
+                                    <span className={color}>Rating:</span> {comments.rating}
+                                </p>
                                 <p className={text}>{comments.comment}</p>
                             </li>
                         );

@@ -17,7 +17,7 @@ export default function Address() {
             <address>
                 <ul>
                     <li>
-                        <p className={address}>м. Києв, пр-т Лесі Українки, 26</p>
+                        <p className={address}>Kyiv, 26 Lesya Ukrainky Ave</p>
                     </li>
                     <li className={listContact}>
                         <Link href="e-mail:info@devstudio.com" className={contact}>
