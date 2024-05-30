@@ -8,6 +8,7 @@ import {
     navigationLogoLink,
     link,
     active,
+    shopping,
 } from './Navigation.module.css';
 import clsx from 'clsx';
 import { FaShoppingBasket } from 'react-icons/fa';
@@ -35,8 +36,8 @@ export default function Navigation() {
                 </NavLink>
                 <SearchBox />
                 <NavLink className={buildLinkClass} to="/delivery_payment">
-                    <FaShoppingBasket />{' '}
-                    {arrSaleBooks.length > 0 ? `${parseFloat(totalScore.toFixed(2))} USD` : ''}
+                    <FaShoppingBasket className={shopping} />{' '}
+                    {arrSaleBooks.length > 0 ? `  ${parseFloat(totalScore.toFixed(2))} USD` : ''}
                 </NavLink>
             </nav>
         </header>
