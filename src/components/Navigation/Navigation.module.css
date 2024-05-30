@@ -108,7 +108,7 @@ header {
 .navigationLogo {
     text-decoration: none;
     font-family: Raleway, sans-serif;
-    color: var(--title-text-color);
+    color: #212121;
     font-weight: bold;
     font-size: 24px;
     line-height: 1.16;

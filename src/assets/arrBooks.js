@@ -510,38 +510,4 @@ export const arrBooks = [
             },
         ],
     },
-    {
-        id: '6655fd255ed5fc31cc7c4c73',
-        orderId: '6f7a8b9c-0d1e-2f3a-4b5c-7d8e9f0a1b2c',
-        quantity: 1,
-        totalScore: 29.99,
-        title: 'The Lord of the Rings',
-        author: 'J.R.R. Tolkien',
-        yearPublished: 1954,
-        genre: 'Fantasy',
-        price: 29.99,
-        currency: 'USD',
-        available: true,
-        stock: 70,
-        publisher: 'George Allen & Unwin',
-        language: 'English',
-        pages: 1216,
-        description: 'An epic fantasy novel about the quest to destroy the One Ring.',
-        coverImageUrl:
-            'https://www.britishbook.ua/upload/resize_cache/iblock/7cb/6p7bt2akk8b6l9end5hb2ttwh4lrhe44/285_448_174b5ed2089e1946312e2a80dcd26f146/kniga_the_lord_of_the_rings_tv_tie_in_edition.jpg',
-        reviews: [
-            {
-                id: 1,
-                reviewer: 'Elijah Young',
-                rating: 5,
-                comment: 'An extraordinary and captivating saga.',
-            },
-            {
-                id: 2,
-                reviewer: 'Charlotte King',
-                rating: 5,
-                comment: 'A timeless adventure that transcends generations.',
-            },
-        ],
-    },
 ];

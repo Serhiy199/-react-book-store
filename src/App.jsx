@@ -8,6 +8,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import BookDetailsPage from './pages/BookDetailsPage/BookDetailsPage';
 import BookReviews from './components/BookReviews/BookReviews';
 import BasketPage from './pages/BasketPage/BasketPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 </Route>
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
+            <Footer />
         </>
     );
 }
