@@ -1,21 +1,120 @@
-.headerStyle {
+/* .headerStyle {
     padding-top: 16px;
     padding-left: 16px;
     background-color: #5b6dcd;
 
     border-radius: 0px 0px 24px 24px;
-}
-.link {
+} */
+/* .link {
     margin-right: 20px;
 
     font-size: 20px;
     color: white;
+} */
+
+/* .nav {
+    display: none;
+}
+
+.contacts {
+    display: none;
+}
+
+header {
+    position: relative;
+    border: 1px solid #ececec;
+}
+
+.hederContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        padding-top: 19px;
+        padding-bottom: 19px;
+
+        .mob-nav-btn {
+            display: none;
+        }
+
+        .list {
+            list-style: none;
+        }
+    }
+} */
+
+/* ///////////////////////////////////////// */
+.header {
+    align-items: center;
+    position: fixed;
+    z-index: 120;
+    padding: 10px 15px;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 480px) {
+    .header {
+        width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        width: 768px;
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        width: 1200px;
+        padding: 25px 0px;
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.link {
+    text-decoration: none;
+    color: #212121;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .link:hover {
-    color: yellowgreen;
+    color: #188ce8;
 }
 
 .active {
-    color: rgb(229, 255, 0);
+    color: #188ce8;
+}
+
+.navigationLogo {
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+    color: var(--title-text-color);
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+}
+
+.navigationLogoLink {
+    color: #2196f3;
 }

@@ -2,7 +2,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { sale } from '../../redux/saleBooksSlice';
-import { listBookStyle, img, linkBook, titleBook, button } from './Book.module.css';
+import { listBookStyle, img, linkBook, titleBook, button, name } from './Book.module.css';
 
 export default function Book({ listBook }) {
     const location = useLocation();
@@ -16,10 +16,9 @@ export default function Book({ listBook }) {
                 <img
                     className={img}
                     src={listBook.coverImageUrl ? listBook.coverImageUrl : defaultImg}
-                    width={250}
                     alt="poster"
                 />
-                <h3 className={titleBook}>{listBook.title}</h3>
+                <h3 className={name}>{listBook.title}</h3>
                 <h4>Author: {listBook.author}</h4>
                 <p>Price: {listBook.price}</p>
 

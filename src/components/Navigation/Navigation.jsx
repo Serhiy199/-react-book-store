@@ -1,10 +1,18 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
-import { headerStyle, active, link } from './Navigation.module.css';
+// import { container } from '../../App.module.css';
+import {
+    header,
+    navigation,
+    navigationLogo,
+    navigationLogoLink,
+    link,
+    active,
+} from './Navigation.module.css';
 import clsx from 'clsx';
 import { FaShoppingBasket } from 'react-icons/fa';
 import { selectAddBook } from '../../redux/saleBooksSlice';
+import SearchBox from '../../components/SearchBox/SearchBox';
 
 export default function Navigation() {
     const arrSaleBooks = useSelector(selectAddBook);
@@ -17,11 +25,15 @@ export default function Navigation() {
     };
 
     return (
-        <header className={headerStyle}>
-            <nav>
+        <header className={header}>
+            <nav className={navigation}>
+                <Link href="./index.html" lang="en" className={navigationLogo}>
+                    <span className={navigationLogoLink}>Book</span>Store
+                </Link>
                 <NavLink className={buildLinkClass} to="/">
                     Home
                 </NavLink>
+                <SearchBox />
                 <NavLink className={buildLinkClass} to="/basket">
                     <FaShoppingBasket />{' '}
                     {arrSaleBooks.length > 0 ? `${parseFloat(totalScore.toFixed(2))} USD` : ''}

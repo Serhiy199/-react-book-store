@@ -1,10 +1,10 @@
 import ListBooks from '../../components/ListBooks/ListBooks';
-import SearchBox from '../../components/SearchBox/SearchBox';
+import HeroSection from '../../components/HeroSection/HeroSection';
 
 export default function HomePage() {
     return (
         <>
-            <SearchBox />
+            <HeroSection />
             <ListBooks />;
         </>
     );
