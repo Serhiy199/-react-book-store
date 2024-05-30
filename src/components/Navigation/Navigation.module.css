@@ -57,7 +57,7 @@ header {
     position: fixed;
     z-index: 120;
     padding: 10px 15px;
-    background-color: #fff;
+    background-color: #f5f4fa;
 }
 
 @media screen and (min-width: 480px) {
